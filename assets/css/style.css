@@ -438,15 +438,52 @@ body {
   #ABOUT
 \*-----------------------------------*/
 
+.about {
+  background-color: var(--cultured-3);
+}
 
+.about .about-banner {
+  margin-block-end: 20px;
+}
 
+.about .section-text,
+.about-item:not(:last-child) {
+  margin-block-end: 25px;
+}
 
+.about-list {
+  margin-block-end: 35px;
+}
+
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.about-item .item-icon {
+  background-color: var(--pumpkin);
+  color: var(--white);
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.about-item .item-title {
+  margin-block-end: 10px;
+}
 
 /*-----------------------------------*\
   #ABOUT 2
 \*-----------------------------------*/
 
+.about-2 .section-text:last-of-type {
+  margin-block: 30px;
+}
 
+.about-2 .about-content {
+  margin-block-end: 30px;
+}
 
 
 

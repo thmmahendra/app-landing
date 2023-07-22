@@ -599,18 +599,171 @@ body {
   #FOOTER
 \*-----------------------------------*/
 
+.footer {
+  background-color: var(--cultured-3);
+}
 
+.footer-top .container {
+  display: grid;
+  gap: 30px;
+}
 
+.footer-top .section-text {
+  margin-block: 15px 22px;
+}
+
+.social-list {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  background-color: var(--white);
+  padding: 12px;
+  border-radius: 50%;
+  transition: var(--transition-1);
+}
+
+.social-link:is(:hover, :focus) {
+  background-color: var(--pumpkin);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.footer-list-title {
+  color: var(--eerie-black);
+  font-family: var(--ff-roboto);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-700);
+  margin-block: 20px;
+}
+
+.footer-link {
+  font-size: var(--fs-4);
+  margin-block-start: 10px;
+  transition: var(--transition-1);
+}
+
+.footer-link:is(:hover, :focus),
+.footer-item .item-link:not(address):is(:hover, :focus) {
+  color: var(--pumpkin);
+}
+
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-block-start: 10px;
+}
+
+.footer-item ion-icon {
+  flex-shrink: 0;
+  color: var(--pumpkin);
+  font-size: 17px;
+  margin-block-start: 2px;
+}
+
+.footer-item .item-link {
+  font-size: var(--fs-4);
+  transition: var(--transition-1);
+}
+
+.footer-bottom {
+  padding-block: 20px;
+  border-block-start: 20px;
+}
+
+.copyright {
+  font-size: var(--fs-4);
+  text-align: center;
+}
+
+.copyright-link {
+  color: var(--pumpkin);
+  display: inline-block;
+}
 
 
 /*-----------------------------------*\
   #BACK TO TOP
 \*-----------------------------------*/
 
+.back-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: -36px;
+  background-color: var(--pumpkin);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-1);
+}
 
-
-
+.back-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-51px);
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+/* 
+* responsive for layer than 575px screen 
+*/
+
+@media (min-width: 575px) {
+
+  /* 
+   * REUSED STYLE 
+  */
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  /* 
+    * FEATURES 
+  */
+  .features-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  /* 
+    * APP 
+  */
+  .app-banner {
+    max-width: max-content;
+  }
+
+  /* 
+    * FOOTErR 
+  */
+  .footer-top .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 
+* responsive for layer than 768px screen 
+*/
+
+@media (min-width: 768px) {
+
+  /* 
+   * CUSTOM PROPERTY 
+  */
+
+  :root {
+    /* 
+    *typography 
+    */
+    --fs-1: 4.5rem;
+  }
+
+}
